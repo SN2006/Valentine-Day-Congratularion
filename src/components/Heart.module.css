@@ -1,0 +1,118 @@
+.red-heart {
+    height: 400px;
+    aspect-ratio: 1;
+    --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+    -webkit-mask-box-image: var(--_m);
+    mask-border: var(--_m);
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    background: #cc333f;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.red-heart__text{
+    font-family: "Playwrite IN", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.red-heart__text:first-child{
+    margin-top: 105px;
+}
+
+.white-heart{
+    height: 600px;
+    aspect-ratio: 1;
+    --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+    -webkit-mask-box-image: var(--_m);
+    mask-border: var(--_m);
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+    background: #fff;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+    z-index: 2;
+}
+
+.animated-text{
+    color: #e67fff;
+    font-family: "Playwrite IN", sans-serif;
+    font-size: 100px;
+    word-spacing: 1rem;
+    z-index: 16;
+}
+
+.animated-text--small{
+    display: none;
+}
+
+@supports not (-webkit-mask-box-image: var(--_m)) {
+    .red-heart {
+        mask:
+                radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+                radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+                conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    }
+}
+
+@media (max-width: 1440px) {
+    .animated-text{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .animated-text{
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 650px) {
+    .white-heart {
+        height: 400px;
+    }
+
+    .red-heart{
+        height: 300px;
+        gap: 1rem;
+    }
+
+    .red-heart__text{
+        font-size: 20px;
+    }
+
+    .red-heart__text:first-child{
+        margin-top: 85px;
+    }
+
+    .animated-text{
+        font-size: 40px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .animated-text--large{
+        display: none;
+    }
+
+    .animated-text--small{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

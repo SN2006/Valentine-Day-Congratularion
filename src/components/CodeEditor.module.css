@@ -1,0 +1,125 @@
+.code-editor {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.code-editor__line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border: 1px solid #AEB3C2;
+    padding: 0 20px;
+}
+
+.code-editor__line-number {
+    color: #AEB3C2;
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: var(--code-font-size);
+}
+
+.code-editor__code {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: var(--code-font-size);
+    padding: 2px 1px;
+    border-left: 1px solid #AEB3C2;
+}
+
+.code-editor__tabs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #AEB3C2;
+    border-bottom: none;
+}
+
+.code-editor__tab {
+    border-bottom: 5px solid #3574F0;
+    padding: 5px 50px;
+    background: white;
+}
+
+.code-editor__tab-text {
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: var(--code-font-size);
+    color: black;
+    position: relative;
+}
+
+.code-editor__tab-img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -35px;
+}
+
+.code-editor__run {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid #AEB3C2;
+    border-bottom: none;
+}
+
+.code-editor__run-btn {
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-editor__run-image {
+    height: 25px;
+}
+
+.green {
+    color: #067D17
+}
+
+.blue {
+    color: #000080
+}
+
+.black {
+    color: black;
+}
+
+@property --code-font-size {
+    inherits: false;
+    syntax: "<length>";
+    initial-value: 20px;
+}
+
+@media (max-width: 650px) {
+    .code-editor {
+        margin-top: 90px;
+    }
+
+    .code-editor__tab-img{
+        width: 25px;
+        height: 25px;
+        left: -30px;
+    }
+
+    .code-editor__tab{
+        padding: 5px 40px;
+    }
+
+    @property --code-font-size {
+        inherits: false;
+        syntax: "<length>";
+        initial-value: 16px;
+    }
+}
