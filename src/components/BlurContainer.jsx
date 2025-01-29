@@ -13,22 +13,22 @@ const containerVariants = {
 
 const closeButtonVariables = {
     initial: {
-        background: "#e67fff",
-        borderColor: "#c700ff",
-        color: "#ffffff",
+        borderColor: "#FFF",
+        outlineColor: '#C94F4F',
+        backgroundColor: '#C94F4F',
         scale: 1,
     },
     hover: {
-        background: "#c700ff",
-        borderColor: "#c700ff",
-        color: "#ffffff",
+        borderColor: "#C94F4F",
+        outlineColor: '#C94F4F',
+        backgroundColor: '#C94F4F',
         scale: 1.2,
     },
     tap: {
         scale: 0.9,
-        background: "#ffffff",
-        borderColor: "#ffffff",
-        color: "#c700ff",
+        outlineColor: '#FFF',
+        backgroundColor: '#FFF',
+        borderColor: "#FFF",
     }
 }
 
@@ -49,7 +49,6 @@ export const BlurContainer = ({children, onClose}) => {
                 className={styles['close-button']}
                 onClick={onClose}
             >
-                Close
             </motion.button>
         </CenterFullScreenContainer>
     </motion.div>
